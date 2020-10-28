@@ -14,7 +14,7 @@ public class Main {
             
         int target = scn.nextInt();
         System.out.println(coinchange(arr,target));
-        
+        scn.close();  
     }
     
     

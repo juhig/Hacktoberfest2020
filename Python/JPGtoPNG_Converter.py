@@ -1,14 +1,10 @@
-import sys
-import os
-from PIL import Image
+from PIL import Image  # Python Image Library - Image Processing
+import glob #iterating through the files of given folder
 
-img_folder = sys.argv[1] #Enter folder which contains the JPEG image
-output_folder = sys.argv[2] #Enter folder where you want to save the converted image
+for file in glob.glob("*.png"):
 
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
+ im = Image.open(file)
 
-for file_name in os.listdir(img_folder):
-    img = Image.open(f'{img_folder}{file_name}')     
-    clean_name = os.path.splitext(file_name)[0]
-    img.save(f'{output_folder}{clean_name}.png', 'png')
+ rgb_im = im.convert('RGB')
+
+ rgb_im.save(file.replace("png", "jpg"), quality=95)

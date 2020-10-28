@@ -1,0 +1,8 @@
+var x= 10;
+var y= 20;
+var z= sum(x,y);
+document.write(z);
+function sum(x,y)
+{
+return x+y;
+}

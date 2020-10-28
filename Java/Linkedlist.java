@@ -1,3 +1,4 @@
+// Usage of Collections in JAVA. An Object of LinkedList class is created and the predefined methods are used to manipulate the List.
 import java.util.*;  
 public class LinkedList {  
   

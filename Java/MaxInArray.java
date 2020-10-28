@@ -8,22 +8,22 @@ public class ARRAY {
 
 	public static void main(String[] args) {
 
-    int[] array = takeInput();
+		int[] array = takeInput();
 
 		display(array);
 
-    System.out.println(maxInArray(array));
+		System.out.println(maxInArray(array));
 
-  }
+	}
 
-  public static int[] takeInput() {
+	public static int[] takeInput() {
 
 		System.out.println(" size? ");
 		int n = scn.nextInt();
 
 		int[] arr = new int[n];
 
-		for(int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println("enter the value for " + i + " index");
 			arr[i] = scn.nextInt();
 		}
@@ -32,19 +32,20 @@ public class ARRAY {
 
 	public static void display(int[] arr) {
 
-		for(int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 		}
 	}
 
-  public static int maxInArray(int[] arr) {
+	public static int maxInArray(int[] arr) {
 		//10,5,20,30,25
 		int max = Integer.MIN_VALUE;
 
-		for(int i = 0; i < arr.length; i ++) {
-			if(arr[i] > max) {
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
 				max = arr[i];
 			}
 		}
 		return max;
 	}
+}

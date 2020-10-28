@@ -1,4 +1,4 @@
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n', 'e']
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n', 'e', 'e', 'f', 'g']
 
 duplicates = []
 for value in some_list:

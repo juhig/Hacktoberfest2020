@@ -1,0 +1,36 @@
+#include<iostream>
+
+using namespace std;
+
+void dispcomb(char* p,int st, int en)
+{
+	if (st==en){
+		for(int i=0;i<en;i++)
+			cout<<*(p+i);
+		cout<<endl;
+	return;
+	}
+	else
+	{
+		for (int i=st; i<en;i++)
+		{
+			swap(*(p+st),*(p+i));
+			dispcomb(p,st+1,en);
+			swap(*(p+st),*(p+i));
+		}
+	}
+	return;
+}
+
+int main()
+{
+	int n;
+	cout<<"Enter length of string : ";
+	cin>>n
+	char arr[n];
+	cout<<"Enter string : ";
+	cin>>arr;
+	char *p=arr;
+	dispcomb(p, 0, n);
+	return 0;
+}

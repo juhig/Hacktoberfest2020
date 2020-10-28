@@ -59,7 +59,7 @@ def test_stationarity(timeseries):
     plt.title('Rolling Mean and Standard Deviation')
     plt.show(block=False)
     
-    print("Results of dickey fuller test")
+    print("Results of dickey fuller CoinCounter.src.CoinCounter.test")
     adft = adfuller(timeseries,autolag='AIC')
     # output for dft will give us without defining what the values are.
     #hence we manually write what values does it explains using a for loop
@@ -148,7 +148,7 @@ print('MAPE: '+str(mape))
 """
 Auto arima gives the value of p,q,d as 3,1,2
 model_autoARIMA = auto_arima(train_data, start_p=0, start_q=0,
-                      test='adf',       # use adftest to find optimal 'd'
+                      CoinCounter.src.CoinCounter.test='adf',       # use adftest to find optimal 'd'
                       max_p=3, max_q=3, # maximum p and q
                       m=1,              # frequency of series
                       d=None,           # let model determine 'd'

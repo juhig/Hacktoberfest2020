@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+##REVERSE A LIST
 
 def swap(a, i, j):
     temp = a[i]
@@ -8,7 +9,7 @@ def swap(a, i, j):
 
 def reverse(a):
     i = 0
-    while i < len(a) / 2:
+    while (i < len(a) / 2):
         swap(a, i, len(a) - i - 1)
         i += 1
     return a

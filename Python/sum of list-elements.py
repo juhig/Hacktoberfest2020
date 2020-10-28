@@ -1,3 +1,5 @@
+#Calculates the sum of a list of numbers
+
 number = int(input("Enter number of elements: "))
 elements = []
 for i in range(number):

@@ -1,0 +1,14 @@
+def areaofatriangle():
+    a_str = input("Enter Length of side one: ")
+    b_str = input("Enter Length of side two: ")
+    c_str = input("Enter Length of side three: ")
+    if a_str:
+        a = float(a_str)
+    if b_str:
+        b = float(b_str)
+    if c_str:
+        c = float(c_str)
+    s = .5 * (a + b + c)
+    x = s * (s-a) * (s-b) * (s-c)
+    area = x ** .5
+    print("The area of a triangle with sides",a,b,c,"is",area)

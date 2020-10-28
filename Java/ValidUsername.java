@@ -8,10 +8,11 @@ class TestClass{
     public static void main(String[] args) {
         int n = Integer.parseInt(scan.nextLine());
         String[] ans = new String[n];
+	String[] userName = new String[n];
         for(int i=0;i<n;i++) {
-            String userName = scan.nextLine();
+            userName[i] = scan.nextLine();
 
-            if (userName.matches(Un.reg)) {
+            if (userName[i].matches(Un.reg)) {
                 ans[i] = "valid";
             } else {
                 ans[i]  = "Invalid";
@@ -19,7 +20,7 @@ class TestClass{
         }
         for(int i=0;i<n;i++)
         {
-			System.out.println(ans[i]);
+			System.out.println(userName+" is "+ans[i]+".");
 		}
     }
 }

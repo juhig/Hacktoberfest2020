@@ -1,7 +1,7 @@
 import MySQLdb
 
 # Open connection
-db = MySQLdb.connect("localhost","testuser","test","TESTDB" )
+db = MySQLdb.connect("localhost","testuser","CoinCounter.src.CoinCounter.test","TESTDB" )
 
 #cursor obj
 cursor = db.cursor()

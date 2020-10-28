@@ -1,0 +1,92 @@
+This is a python program to implement doubly linked list."""
+
+# Creating a class
+class Node:
+
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+# Displaying contents of the DLL
+    def display(self):
+        current = self.head
+        if(self.head == None):
+            print("List is empty")
+            return
+        print("Nodes of doubly linked list: ")
+        while(current != None):
+            print(current.data)
+            current = current.next
+# Adding a node to the DLL
+    def addNode(self, data):
+        newNode = Node(data)
+
+        if(self.head == None):
+            self.head = self.tail = newNode
+            self.head.previous = None
+            self.tail.next = None
+        else:
+            self.tail.next = newNode
+            newNode.previous = self.tail
+            self.tail = newNode
+            self.tail.next = None
+    def get_node(self, index):
+
+        current = self.head
+        for i in range(index-1):
+            if current is None:
+                return None
+            current = current.next
+        return current
+# Using insertAfter() to add a node       
+    def insertAfter(self, position, data):
+        
+        newNode = Node(data)
+        index = int(position)
+        ref_node = self.get_node(index)
+        if ref_node.next is None:
+            self.tail = newNode
+        else:
+            newNode.next = ref_node.next
+            newNode.next.prev = newNode
+            ref_node.next = newNode
+# Deleting a node using remove()           
+    def remove(self, position):
+        index = int(position)
+        
+        node = self.get_node(index)
+        if node is None:
+            print('No such index.')
+            return
+        elif node.prev is None:
+            self.head = node.next
+            self.head.prev=None
+        elif node.next is None:
+            node.prev = None
+            self.tail=node.prev
+        else:
+            node.prev.next = node.next
+            node.next.prev=node.prev       
+                
+dList = DoublyLinkedList();
+
+dList.addNode(1);
+dList.addNode(2);
+dList.addNode(3);
+dList.addNode(4);
+dList.addNode(5);
+dList.display();
+dList.insertAfter(3,41)
+dList.display();
+dList.remove(5);
+dList.display();
+
+
+
+            
+

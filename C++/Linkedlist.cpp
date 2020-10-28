@@ -20,18 +20,18 @@ public:
 
     void add_node(int n)
     {
-        node *tmp = new node;
+        node *temp = new node;
         tmp->data = n;
         tmp->next = NULL;
 
         if(head == NULL)
         {
-            head = tmp;
-            tail = tmp;
+            head = temp;
+            tail = temp;
         }
         else
         {
-            tail->next = tmp;
+            tail->next = temp;
             tail = tail->next;
         }
     }

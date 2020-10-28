@@ -16,10 +16,10 @@ int main(){
    int e = n-1;
    int mid;
 
-   while(s<e){
+   while(s<=e){
         mid = (s+e)/2;
 		 if(a[mid]==key){
-            cout<<mid;
+            cout<<"Found at position"<<mid+1<<endl;
             break;
         }
         else if(a[mid]>key){
@@ -30,7 +30,7 @@ int main(){
         }
    }
     if(s>e){
-        return -1;
+        cout<<"Not Found"<<endl;
 		}
 
 return 0;

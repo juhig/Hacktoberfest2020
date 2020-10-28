@@ -4,7 +4,7 @@
 import statistics 
 
 # unsorted list of random integers 
-data1 = [2, -2, 3, 6, 9, 4, 5, -1] 
+data1 = [2, -2, 3, 6, 9, -4, 5, -1, 3, 5, -5 ] 
 
 
 # Printing median of the 

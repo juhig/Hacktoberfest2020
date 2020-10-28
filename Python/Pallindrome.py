@@ -10,9 +10,9 @@ def is_pallindrome(string):
 
 def pallindrome_sentence(sentence):
     string=""
-    for char in sentence:
-        if char.isalnum():
-            string+=char
+    for ch in sentence:
+        if ch.isalnum():
+            string+=ch
     print(string)
     return is_pallindrome(string)
 

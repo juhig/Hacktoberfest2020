@@ -1,0 +1,10 @@
+.buttons{
+    border: 1px solid black;
+    width: 30%;
+    justify-content: center;
+    background-color: burlywood;
+    padding-left: 8%;
+}
+.Second,.third{
+    display: none;
+}

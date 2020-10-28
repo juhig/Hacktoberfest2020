@@ -1,0 +1,22 @@
+public static void Main()
+{
+    const int THREE = 3;
+    const int FIVE = 5;
+
+    for (int i = 1; i < 101; i++)
+    {
+       if ((i % THREE == 0) && (i % FIVE == 0))
+       {
+           Console.WriteLine(i + " FIZZBUZZ");
+           //continue;
+       }
+       else if (i % FIVE == 0)
+       {
+           Console.WriteLine(i + " FIZZ");
+       }
+       else if (i % THREE == 0)
+       {
+           Console.WriteLine(i + " BUZZ");
+       }
+    }
+}

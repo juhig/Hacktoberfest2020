@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define MAX 100
+int dp[100][100];
+int knapsack(int val[], int wt[], int W, int n){
+	if(n == 0 || W == 0){
+		return 0;
+	}
+	if(dp[W][n] != -1){
+		return dp[W][n];
+	}
+	if(wt[n-1] <= W){
+		return dp[W][n] = max( (val[n-1]+knapsack(val,wt,W-wt[n-1], n-1)), knapsack(val,wt,W, n-1) );
+	} else {
+		return dp[W][n]=  knapsack(val,wt,W, n-1);
+	}
+}
+int main(){
+	int W, n;
+	int wt[MAX], val[MAX];
+	cin >> n >> W;
+	memset(dp, -1, sizeof(dp));
+	for(int i = 0; i < n; i++){
+		cin >> wt[i];
+	}
+	for(int i = 0; i < n; i++){
+		cin >> val[i];
+	}
+	cout <<knapsack(val, wt, W, n);
+	cout << endl;
+	return 0;
+}

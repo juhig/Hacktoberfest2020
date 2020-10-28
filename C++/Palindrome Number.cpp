@@ -25,8 +25,8 @@ int main()
 	cout << "Enter a number" << endl;
     cin >> number;
     if (isPalindrome(number))
-        cout << "The integer is a palindrome" << endl;
+        cout << "The integer is  palindrome number" << endl;
     else
-        cout << "The integer is not a palindrome" << endl;
+        cout << "The integer is not a palindrome number" << endl;
 	return 0;
 }

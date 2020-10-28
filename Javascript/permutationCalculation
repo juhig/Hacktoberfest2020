@@ -1,0 +1,31 @@
+      var element = document.getElementById('metode-solusi');
+      var dataSheetMoney = [1000, 2000, 5000, 10000, 20000, 50000, 100000]
+      var moneyQuantity = dataSheetMoney.length
+
+      var alphabhet = Math.pow(26,3)
+      console.log(alphabhet)
+
+      var digitNumber = Math.pow(10,6)
+      console.log(digitNumber)
+
+      var totalPermutation = alphabhet*digitNumber
+      console.log(totalPermutation)
+
+      if(dataSheetMoney.length > 0){
+        const arr = []
+        for(var i = 0; i < dataSheetMoney.length; i++){
+            var possibility = dataSheetMoney[i] * totalPermutation
+            console.log(possibility)
+            arr.push(possibility)
+
+        }
+        console.log(arr)
+
+        var moneyCirculation  = arr.reduce(function(result,item) {
+        return result + item;
+        }, 0);
+        console.log(moneyCirculation);   
+
+        var totalMoneyCirculation = moneyCirculation*3
+        console.log(totalMoneyCirculation)
+      }

@@ -13,5 +13,5 @@ void main()
 		num=num/10;
 	}
 	
-	cout<<"Sum of number is:"<<sum;
+	cout<<"Sum of the didgits of a number is:"<<sum;
 }

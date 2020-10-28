@@ -21,13 +21,11 @@ if ($r >= $l)
 		// mid, then it can only be 
 		// present in left subarray 
 		if ($arr[$mid] > $x) 
-			return binarySearch($arr, $l, 
-								$mid - 1, $x); 
+			return binarySearch($arr, $l, $mid - 1, $x); 
 
 		// Else the element can only 
 		// be present in right subarray 
-		return binarySearch($arr, $mid + 1, 
-							$r, $x); 
+		return binarySearch($arr, $mid + 1, $r, $x); 
 } 
 
 // We reach here when element 
@@ -44,5 +42,5 @@ if(($result == -1))
 echo "Element is not present in array"; 
 else
 echo "Element is present at index ", 
-							$result; 							
+      $result; 							
 ?> 
